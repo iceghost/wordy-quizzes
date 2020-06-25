@@ -9,9 +9,12 @@
   <body>
     <div id="app"></div>
     <script>
+      let url = window.location.hostname + window.location.pathname;
+      if (url.endsWith("/")) url = url.slice(0, -1);
+
       Elm.Main.init({
         node: document.getElementById("app"),
-        flags: document.URL,
+        flags: url,
       });
     </script>
   </body>
