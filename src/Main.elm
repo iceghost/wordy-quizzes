@@ -395,7 +395,7 @@ viewResult name score =
     Element.column
         [ Element.centerY
         , Element.centerX
-        , Font.size 50
+        , Font.size 30
         ]
         [ Element.paragraph []
             [ Element.text
@@ -408,21 +408,23 @@ viewResult name score =
             , Element.text " score is "
             , Element.el [ Font.color OneDark.green ] (Element.text (String.fromInt score ++ "/10"))
             ]
-        , Element.text
-            (if score == 10 then
-                "Ok cool \u{1F644}"
+        , Element.paragraph []
+            [ Element.text
+                (if score == 10 then
+                    "Ok cool \u{1F644}"
 
-             else if score == 9 then
-                "So close! You can do it! 😍"
+                 else if score == 9 then
+                    "So close! You can do it! 😍"
 
-             else if score == 8 then
-                "Great! Let's do better next time 😎"
+                 else if score == 8 then
+                    "Great! Let's do better next time 😎"
 
-             else if score == 7 then
-                "Nice! But is that all you got? 😗"
+                 else if score == 7 then
+                    "Nice! But is that all you got? 😗"
 
-             else
-                "Please try again... 🙂"
-            )
+                 else
+                    "Please try again... 🙂"
+                )
+            ]
         , Input.button [ Font.underline, Font.color OneDark.darkRed ] { onPress = Just Reset, label = Element.text "Reset" }
         ]

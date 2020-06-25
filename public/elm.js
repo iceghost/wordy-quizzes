@@ -14186,7 +14186,7 @@ var $author$project$Main$viewResult = F2(
 				[
 					$mdgriffith$elm_ui$Element$centerY,
 					$mdgriffith$elm_ui$Element$centerX,
-					$mdgriffith$elm_ui$Element$Font$size(50)
+					$mdgriffith$elm_ui$Element$Font$size(30)
 				]),
 			_List_fromArray(
 				[
@@ -14207,8 +14207,14 @@ var $author$project$Main$viewResult = F2(
 							$mdgriffith$elm_ui$Element$text(
 								$elm$core$String$fromInt(score) + '/10'))
 						])),
-					$mdgriffith$elm_ui$Element$text(
-					(score === 10) ? 'Ok cool \uD83D\uDE44' : ((score === 9) ? 'So close! You can do it! 😍' : ((score === 8) ? 'Great! Let\'s do better next time 😎' : ((score === 7) ? 'Nice! But is that all you got? 😗' : 'Please try again... 🙂')))),
+					A2(
+					$mdgriffith$elm_ui$Element$paragraph,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$mdgriffith$elm_ui$Element$text(
+							(score === 10) ? 'Ok cool \uD83D\uDE44' : ((score === 9) ? 'So close! You can do it! 😍' : ((score === 8) ? 'Great! Let\'s do better next time 😎' : ((score === 7) ? 'Nice! But is that all you got? 😗' : 'Please try again... 🙂'))))
+						])),
 					A2(
 					$mdgriffith$elm_ui$Element$Input$button,
 					_List_fromArray(
