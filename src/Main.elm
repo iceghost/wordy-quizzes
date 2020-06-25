@@ -90,7 +90,7 @@ init hostname =
       , score = 0
       }
     , Http.get
-        { url = hostname ++ "/public/today.txt"
+        { url = hostname ++ "public/today.txt"
         , expect =
             Http.expectString
                 (RemoteData.fromResult
@@ -204,7 +204,7 @@ update msg model =
                 ShuffleToday data ->
                     ( { model | today = data }
                     , Http.get
-                        { url = model.hostname ++ "/public/learned.txt"
+                        { url = model.hostname ++ "public/learned.txt"
                         , expect =
                             Http.expectString
                                 (RemoteData.fromResult

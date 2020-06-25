@@ -6310,7 +6310,7 @@ var $author$project$Main$init = function (hostname) {
 							$elm$core$Basics$composeR,
 							$krisajenkins$remotedata$RemoteData$map($author$project$Main$parseQuizzes),
 							$author$project$Main$FetchToday))),
-				bE: hostname + '/public/today.txt'
+				bE: hostname + 'public/today.txt'
 			}));
 };
 var $elm$json$Json$Decode$string = _Json_decodeString;
@@ -7005,7 +7005,7 @@ var $author$project$Main$update = F2(
 												$elm$core$Basics$composeR,
 												$krisajenkins$remotedata$RemoteData$map($author$project$Main$parseQuizzes),
 												$author$project$Main$FetchLearned))),
-									bE: model.aG + '/public/learned.txt'
+									bE: model.aG + 'public/learned.txt'
 								}));
 					case 4:
 						var data = msg.a;
